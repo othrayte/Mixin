@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="p-no-query-min.js"></script>
+        <script type="text/javascript">
+          Proxino.key = "x28h4EfUBy3DwsC6lD2G_Q";
+          Proxino.track_errors();
+          Proxino.log("Notice: Started");
+          window.onerror = function(e){ alert(e); }
+          //alert("Logging")
+        </script>
+        <script type="text/javascript" src="jquery-ui-1.9.2.custom.min.js"></script>
+        <script type="text/javascript" src="jquery.masonry.min.js"></script>
+        <script type="text/javascript" src="views.js"></script>
+        <script type="text/javascript" src="core.js"></script>
+
+        <link rel="stylesheet" href="sp://import/css/core-dark.css">
+        <link rel="stylesheet" href="sp://import/css/api.css">
+        <link rel="stylesheet" href="jquery-ui-1.9.2.custom.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="left-wrapper">
+            <div id="left" class="side"></div>
+        </div>
+        <div id="center">
+            <div id="player"></div><div id="db1"></div>
+            <div id="playlist"></div>
+            <div id="controls"></div>
+        </div>
+        <div id="left-wrapper">
+            <div id="right" class="side"></div>
+        </div>
+    </body>
+</html>

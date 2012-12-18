@@ -1,0 +1,38 @@
+{
+	"AcceptedLinkTypes": [
+		"album",
+		"artist",
+		"playlist",
+		"track",
+		"user"
+	],
+	"AppDescription": {
+		"en": "A track mixing app for Spotify"
+	},
+	"AppIcon": {
+		"36x18": "mixin_36x18.png",
+		"32x32": "mixin_32x32.png",
+		"64x64": "mixin_64x64.png",
+		"128x128": "mixin_128x128.png",
+		"256x256": "mixin_256x256.png"
+	},
+	"AppName": {
+		"en": "Mixin"
+	},
+	"BundleIdentifier": "mixin",
+	"BundleType": "Application",
+	"BundleVersion": "0.1.0",
+	"Dependencies": {
+	  "api": "0.2.3",
+	  "util": "0.1.0",
+	  "resources": "0.2.2"
+	},
+    "RequiredPermissions": [
+    	"https://*.proxino.com"
+    ],
+	"RequiredInterface": 1,
+	"SupportedLanguages": [
+		"en"
+	],
+	"VendorIdentifier": "net.othrayte"
+}
