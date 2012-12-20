@@ -170,6 +170,8 @@ tick = function() {
             if (oldTrack != newTrack) {
                 playlist.set(index, newTrack);
                 updateList(list, index);
+            } else {
+                tick();
             }
         }
     } else {
@@ -350,7 +352,7 @@ addSource = function(name, type, object) {
     source.object = object;
     source.influence = 50;
     source.tracks = Array()
-    source.slider = $('<div class="slider">').slider({range: "min", step: 5, value: 50, max: 100/.71, orientation: "vertical"});
+    source.slider = $('<div class="slider">').slider({range: "min", step: 5, value: 50, max: 148, orientation: "vertical"});
     if (object == null) {
         source.artwork = $('<div class="artwork">');
     } else {
@@ -364,15 +366,23 @@ addSource = function(name, type, object) {
         )
     );
     source.slider.bind("slide", function(event, ui) {
-        if (ui.value > 100) {
-            if (source.influence != 100) {
-                source.influence = 100;
-                source.slider.slider( "option", "value", 100);
+        var v = ui.value - 16;
+        if (v > 108) {
+            if (source.influence != 108) {
+                source.influence = 108;
+                source.slider.slider( "option", "value", 124);
+                onChangeInfluence();
+            }
+            return false;
+        } else if (v < 0) {
+            if (source.influence != 0) {
+                source.influence = 0;
+                source.slider.slider( "option", "value", 16);
                 onChangeInfluence();
             }
             return false;
         }
-        source.influence = ui.value;
+        source.influence = v;
         onChangeInfluence();
     });
     sources.push(source);
