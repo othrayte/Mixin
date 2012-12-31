@@ -63,7 +63,7 @@ tick = function() {
         dirty = false;
         index = 0;
     }
-    //$("#left").append(" "+index);
+    //$("#right").append(" "+index);
     if (index == 0) {
         // recalc influence
         totalInfluence = 0;
@@ -98,7 +98,7 @@ tick = function() {
 
         newTrack = null;
         // Keep same track if suitable
-        //$("#left").append(" y"+index);
+        //$("#right").append(" y"+index);
         if (oldTrack != null && sourceId in tracks[oldTrack]) {
             //$("#left").append(" z"+index);
             newTrack = oldTrack
@@ -140,7 +140,7 @@ tick = function() {
             }
         }
 
-        //$("#left").append(" a"+index);
+        //$("#right").append(" a"+index);
         // Increase counts
         track = tracks[newTrack];
         for (i in track) {
@@ -170,8 +170,6 @@ tick = function() {
             if (oldTrack != newTrack) {
                 playlist.set(index, newTrack);
                 updateList(list, index);
-            } else {
-                tick();
             }
         }
     } else {
@@ -182,7 +180,11 @@ tick = function() {
     }
 
     index++;
-    setTimeout("tick()", interval);
+    if (oldTrack !== null && oldTrack == newTrack) {
+        tick();
+    } else {
+        setTimeout("tick()", interval);
+    }
 }
 
 onChangeInfluence = function() {

@@ -1,115 +1,116 @@
 body {
-	-webkit-user-select: none;
-	padding: 0;
-	margin: 0;
-	display: -webkit-box;
+    -webkit-user-select: none;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
     -webkit-box-orient: horizontal;
 }
 
 #left-wrapper {
-	-webkit-box-flex: 1;
-	overflow: hidden;
+    -webkit-box-flex: 1;
+    overflow: hidden;
 }
 
 #left {
-	margin-left: -63px; /* Never show empty space to the side of the covers*/
+    margin-left: -63px; /* Never show empty space to the side of the covers*/
 }
 
 #right-wrapper {
-	-webkit-box-flex: 1;
-	overflow: hidden;
+    -webkit-box-flex: 1;
+    overflow: hidden;
 }
 
 #right {
-	margin-right: -63px; /* Never show empty space to the side of the covers*/
+    margin-right: -63px; /* Never show empty space to the side of the covers*/
 }
 
 #center {
-	width: 760px;
-	display: -webkit-box;
+    width: 760px;
+    display: -webkit-box;
     -webkit-box-orient: vertical;
 }
 
 #center .sp-list {
-	-webkit-box-flex: 1;
-	max-height: none;
+    -webkit-box-flex: 1;
+    max-height: none;
 }
 
 #controls {
-	display: -webkit-box;
+    display: -webkit-box;
     -webkit-box-orient: horizontal;
     -webkit-box-pack: center;
-	background-color: #404040;
+    background-color: #404040;
+    overflow-x: scroll;
 }
 
 
 .control {
-	width: 64px;
-	background-color: #F4F7FB;
-	display: -webkit-box;
+    width: 64px;
+    background-color: #F4F7FB;
+    display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-box-pack: justify;
     border: solid #BDCCDB 1px;
-	border-radius: 3px;
-	margin: 3px;
-	padding: 0;
-	line-height: 0;
+    border-radius: 3px;
+    margin: 3px;
+    padding: 0;
+    line-height: 0;
 }
 
 .control .artwork {
-	height: 64px;
-	width: 64px;
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
+    height: 64px;
+    width: 64px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
 .control .name {
-	line-height: 100%;
-	text-align: center;
-	margin-bottom: 2px;
+    line-height: 100%;
+    text-align: center;
+    margin-bottom: 2px;
 }
 
 .control .slider {
-	height: 192px;
+    height: 192px;
 }
 
 .control .slider input[type="range"]{
-	-webkit-appearance: slider-vertical;
-	width: 100%;
-	height: 100%;
+    -webkit-appearance: slider-vertical;
+    width: 100%;
+    height: 100%;
 }
 
 /* Side artwork */
 
 .side {
-	line-height: 0;
-	background-color: #212121;
+    line-height: 0;
+    background-color: #212121;
 }
 
 /* Slider oversides */
 
 .ui-slider {
-	width: 16px;
-	background-image: url(slider_track_inactive.png);
-	background-repeat: repeat-y;
-	margin: 8px auto;
-	border-radius: 0;
+    width: 16px;
+    background-image: url(slider_track_inactive.png);
+    background-repeat: repeat-y;
+    margin: 8px auto;
+    border-radius: 0;
 }
 
 .ui-slider-range {
-	background-image: url(slider_track_active.png);
-	background-repeat: repeat-y;
+    background-image: url(slider_track_active.png);
+    background-repeat: repeat-y;
 }
 
 .ui-slider-handle {
-	background-image: url('slider_pad.png') !important;
-	width: 38px !important;
-	height: 64px !important;
-	background-color: transparent !important;
-	border: none !important;
-	border-radius: 0 !important;
-	margin-left: -6px !important;
-	margin-bottom: -30px !important;
+    background-image: url('slider_pad.png') !important;
+    width: 38px !important;
+    height: 64px !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin-left: -6px !important;
+    margin-bottom: -30px !important;
 }
 
 /* Masonry transistions */
